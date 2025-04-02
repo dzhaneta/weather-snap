@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# WeatherSnap: forecast in a snap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## О проекте
 
-Currently, two official plugins are available:
+WeatherSnap - лаконичный сервис прогноза погоды с стейт-менеджментом ReduxToolkit и графиком Chart.js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Старт работы с проектом
 
-## Expanding the ESLint configuration
+- Установка необходимых зависимостей:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  ```bash
+  npm install
+  ```
 
-- Configure the top-level `parserOptions` property like this:
+### Скрипты запуска проекта
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Запуск проекта в режиме разработки:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+  ```bash
+  npm run dev
+  ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Сборка проекта для деплоя:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+  ```bash
+  npm run build
+  ```
+
+- Проверка проекта на ошибки:
+
+  ```bash
+  npm run lint
+  ```
+
+- Локальное превью билда:
+
+  ```bash
+  npm run preview
+  ```
+
+### Основные используемые технологии
+
+- React 19.0.0
+- Typescript 5.7.2
+- Redux Toolkit 2.5.1
+- react-redux 9.2.0
+- Axios 1.7.9
+- Chart.js 4.4.7
+- react-chart-js-2 5.3.0
+- TailwindCSS 4.0.6
+- ESLint 9.19.0
+- Vite 6.1.0
