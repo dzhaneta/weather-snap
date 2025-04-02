@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@utility main-gradient {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
+  }
+
+
+body, :root {
+  @apply 
+    w-full 
+    h-full 
+    flex 
+    justify-center 
+    items-center 
+    text-purple-950
+    main-gradient;
+}
+
